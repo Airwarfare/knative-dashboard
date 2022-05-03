@@ -1,5 +1,5 @@
 name: Service Build
-on: [push]
+on: [push, workflow_dispatch]
 jobs:
   build-service:
     uses: ./.github/workflows/reuseable-build.yml
