@@ -25,4 +25,5 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           flag-name: Service-${{github.run_number}}
+          path-to-lcov: ./${{ inputs.working-directory }}/.coverage/lcov.info
           # base-path: ${{ inputs.working-directory }}
