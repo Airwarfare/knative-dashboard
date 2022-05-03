@@ -23,4 +23,6 @@ test(`it returns 'world' from resovler`, async () => {
     expect(result.errors).toBeUndefined();
     expect(result.data).not.toBeNull();
     expect(result.data?.hello).toBe("world");
+    
+    await testServer.stop()
 });
