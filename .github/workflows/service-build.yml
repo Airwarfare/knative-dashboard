@@ -1,0 +1,7 @@
+name: Service Build
+on: [push]
+jobs:
+  build-service:
+    uses: ./.github/workflows/reuseable-build.yml
+    with:
+      working-directory: service
