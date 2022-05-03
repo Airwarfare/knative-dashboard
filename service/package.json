@@ -6,7 +6,10 @@
   "scripts": {
     "start": "npm run build:live",
     "build": "tsc -p .",
-    "build:live": "nodemon --watch 'src/**/*.ts' --exec \"ts-node\" src/index.ts"
+    "build:live": "nodemon --watch 'src/**/*.ts' --exec \"ts-node\" src/index.ts",
+    "lint": "npm run eslint",
+    "eslint": "eslint \"**/*.{ts,tsx}\"",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -15,8 +18,14 @@
     "shared": "file:../shared"
   },
   "devDependencies": {
+    "@types/jest": "^27.5.0",
     "@types/node": "^17.0.31",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
+    "@typescript-eslint/parser": "^5.22.0",
+    "eslint": "^8.14.0",
+    "jest": "^27.5.0",
     "nodemon": "^2.0.16",
+    "ts-jest": "^27.1.4",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.4"
   }
