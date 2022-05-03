@@ -1,12 +1,13 @@
-import { injectable } from "inversify";
+import { inject, injectable } from "inversify";
 import { Query, Resolver } from "type-graphql";
 import { HelloWorldService } from "../services/HelloWorldService";
+import TYPES from "../types";
 
 @injectable()
 @Resolver()
 export class HelloWorldResolver {
     constructor(
-        private readonly helloWorldService: HelloWorldService,
+        @inject(TYPES.HelloWorldService) private readonly helloWorldService: HelloWorldService,
     ) {}
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
